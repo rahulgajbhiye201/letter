@@ -44,15 +44,15 @@ export default function LetterCreatorForm() {
           />
           <input
             type="text"
-            className="rounded-lg w-72"
+            className="rounded-lg w-64"
             disabled
-            defaultValue="I want to tell you something. That,"
+            defaultValue="I want to tell you something."
           />
           <input
             type="text"
             className="rounded-lg w-80"
             disabled
-            defaultValue="In the world with billions of people. I"
+            defaultValue="That, In the world with billions of people. I"
           />
           <textarea
             name="letter"

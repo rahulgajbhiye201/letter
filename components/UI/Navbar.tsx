@@ -1,13 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { UserButton } from "@clerk/nextjs";
 import { FetchUserID } from "@/lib/db/db-helper";
 import { useUrl } from "@/context/UrlContext";
 
 export default function NavLoader() {
   const { url, updateUrl } = useUrl();
+  const [hover, setHover] = useState(false);
 
   useEffect(() => {
     const fetchDataFromApi = async () => {
@@ -20,14 +21,21 @@ export default function NavLoader() {
       }
     };
     fetchDataFromApi();
-  }, []);
+  }, [hover]);
 
   return (
     <header className="p-4 flex lg:justify-center">
       <div className="bg-rose-50 flex items-center w-full justify-between rounded-lg shadow-md shadow-rose-200/30 px-4 py-2 lg:w-6/12">
         <ul className="flex gap-4">
           <Link href={"/"}>Letter Creator</Link>
-          <Link href={`/letter/${url}`}>My Letter</Link>
+          <Link
+            href={`/letter/${url}`}
+            onMouseEnter={() => {
+              setHover(true);
+            }}
+          >
+            My Letter
+          </Link>
         </ul>
         <div className="size-8">
           <UserButton afterSignOutUrl="/" />

@@ -199,14 +199,14 @@ const Text: React.FC<textProps> = ({
           </h1>
 
           <p id="ValMessage" className="text-lg opacity-0 lg:text-xl absolute">
-            I want to tell you something. That,{""}
+            I want to tell you something.
           </p>
 
           <p
             id="ValMessage1"
             className="text-lg opacity-0 lg:text-xl absolute w-full"
           >
-            In the world of billions of people.
+            That, In the world with billions of people.
           </p>
 
           <p
