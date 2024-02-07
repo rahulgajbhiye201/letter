@@ -31,7 +31,7 @@ export default function LetterCreatorForm() {
         <div className="flex flex-wrap gap-4">
           <input
             type="text"
-            className="rounded-lg w-16"
+            className="rounded-lg w-20"
             defaultValue="hello!"
           />
           <input
