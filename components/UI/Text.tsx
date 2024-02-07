@@ -199,14 +199,14 @@ const Text: React.FC<textProps> = ({
           </h1>
 
           <p id="ValMessage" className="text-lg opacity-0 lg:text-xl absolute">
-            I want to tell you something.
+            I want to tell you something. That,{""}
           </p>
 
           <p
             id="ValMessage1"
             className="text-lg opacity-0 lg:text-xl absolute w-full"
           >
-            That, in the world of billions of people.
+            In the world of billions of people.
           </p>
 
           <p
@@ -218,7 +218,7 @@ const Text: React.FC<textProps> = ({
           <div id="ValResponse" className="absolute hidden opacity-0">
             <div className="flex gap-4 items-center flex-col">
               <p className="text-lg lg:text-xl">
-                In the occasion of Love, {valentines_name}.
+                So, In the occasion of Love, {valentines_name}.
                 <br />I am asking you, Will you be my valentine?
               </p>
               <div>

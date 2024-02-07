@@ -44,27 +44,27 @@ export default function LetterCreatorForm() {
           />
           <input
             type="text"
-            className="rounded-lg w-min"
+            className="rounded-lg w-72"
             disabled
-            defaultValue="I want to tell you something."
+            defaultValue="I want to tell you something. That,"
           />
           <input
             type="text"
-            className="rounded-lg w-full"
+            className="rounded-lg w-80"
             disabled
-            defaultValue="That, in the world of billions of people. I"
+            defaultValue="In the world with billions of people. I"
           />
           <textarea
             name="letter"
             required
             className="rounded-lg h-36 w-full"
-            placeholder="Let him/her know. In the world of billions of people, Why you're the best choice to be his/hers Valentine."
+            placeholder="Let him/her know. In the world with billions of people, Why you're the best choice to be his/hers Valentine."
           ></textarea>
           <input
             type="text"
-            className="rounded-lg w-52"
+            className="rounded-lg w-60"
             disabled
-            defaultValue="In the occasion of Love,"
+            defaultValue="So, In the occasion of Love,"
           />
           <input
             type="text"
