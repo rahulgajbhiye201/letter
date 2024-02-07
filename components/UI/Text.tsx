@@ -99,9 +99,18 @@ const Text: React.FC<textProps> = ({
           opacity: [0, 1],
         })
         .add({
-          targets: ["#ValMessage1", "#ValBlushGif"],
+          targets: "#ValMessage1",
           opacity: [1, 0],
-          delay: 20000,
+          delay: 3000,
+        })
+        .add({
+          targets: "#ValMessage2",
+          opacity: [0, 1],
+        })
+        .add({
+          targets: ["#ValMessage2", "#ValBlushGif"],
+          opacity: [1, 0],
+          delay: 15000,
         })
         .add({
           targets: "#ValResponse",
@@ -164,14 +173,14 @@ const Text: React.FC<textProps> = ({
 
       {(responsed && valentines_response === "Yes") ||
       clicked.elem === "Yes" ? (
-        <div className="flex justify-center size-64 lg:size-72 items-center relative m-auto">
+        <div className="flex justify-center size-64 items-center relative m-auto">
           <AnimationCouple />
         </div>
       ) : (
         <></>
       )}
       {(responsed && valentines_response === "No") || clicked.elem === "No" ? (
-        <div className="flex justify-center size-64 lg:size-72 items-center relative m-auto">
+        <div className="flex justify-center size-64 items-center relative m-auto">
           <AnimationBroken />
         </div>
       ) : (
@@ -197,20 +206,26 @@ const Text: React.FC<textProps> = ({
             id="ValMessage1"
             className="text-lg opacity-0 lg:text-xl absolute w-full"
           >
-            {valentines_letter}
+            That, in the world of billions of people.
+          </p>
+
+          <p
+            id="ValMessage2"
+            className="text-lg opacity-0 lg:text-xl absolute w-full"
+          >
+            I {valentines_letter}
           </p>
           <div id="ValResponse" className="absolute hidden opacity-0">
             <div className="flex gap-4 items-center flex-col">
-              <p className="text-lg lg:text-2xl">
-                In the occasion of Love, I am asking you.
-                <br />
-                {valentines_name}, Will you be my valentine?
+              <p className="text-lg lg:text-xl">
+                In the occasion of Love, {valentines_name}.
+                <br />I am asking you, Will you be my valentine?
               </p>
               <div>
                 <button
                   ref={btnYes}
                   value={"Yes"}
-                  className="bg-rose-300 m-4 rounded-lg px-4 py-1"
+                  className="bg-rose-300 m-4 rounded-lg px-4 py-1 hover:bg-rose-400"
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                   onClick={(e) => handleYesNo(e)}
@@ -220,7 +235,7 @@ const Text: React.FC<textProps> = ({
                 <button
                   ref={btnNo}
                   value={"No"}
-                  className="bg-blue-300 m-4 rounded-lg px-4 py-1"
+                  className="bg-blue-300 m-4 rounded-lg px-4 py-1 hover:bg-blue-400"
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                   onClick={(e) => handleYesNo(e)}

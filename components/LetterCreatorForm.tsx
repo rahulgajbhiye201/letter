@@ -28,24 +28,54 @@ export default function LetterCreatorForm() {
       className="bg-violet-200 p-4 shadow-xl shadow-violet-300/50"
     >
       <div className="flex flex-col justify-center gap-4">
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-wrap gap-4">
+          <input
+            type="text"
+            className="rounded-lg w-16"
+            defaultValue="hello!"
+          />
           <input
             type="text"
             name="name"
-            className="rounded-lg"
+            className="rounded-lg w-52"
             required
             placeholder="Name of your Valentine"
+          />
+          <input
+            type="text"
+            className="rounded-lg w-min"
+            defaultValue="I want to tell you something."
+          />
+          <input
+            type="text"
+            className="rounded-lg w-full"
+            defaultValue="That, in the world of billions of people. I"
           />
           <textarea
             name="letter"
             required
-            className="rounded-lg h-56"
+            className="rounded-lg h-36 w-full"
             placeholder="Let him/her know. In the world of billions of people, Why you're the best choice to be his/hers Valentine."
           ></textarea>
+          <input
+            type="text"
+            className="rounded-lg w-52"
+            defaultValue="In the occasion of Love,"
+          />
+          <input
+            type="text"
+            className="rounded-lg w-52"
+            placeholder="Name of your Valentine."
+          />
+          <input
+            type="text"
+            className="rounded-lg w-full"
+            defaultValue="I am asking you, Will you be my valentine"
+          />
 
           <input hidden name="background" value={bgSelected} readOnly />
         </div>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
           <Carousel
             handleBgValue={(e) => handleBgValue(e)}
             bgSelected={bgSelected}

@@ -27,9 +27,9 @@ const Carousel: React.FC<CarouselProps> = ({ handleBgValue, bgSelected }) => {
             <Image
               src={`/${items}.svg`}
               alt={items}
-              width={300}
-              height={300}
-              priority={true}
+              width={400}
+              height={400}
+              priority
               className="rounded-lg size-auto"
             />
           </button>

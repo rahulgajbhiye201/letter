@@ -4,6 +4,7 @@ import { fetchLetterData, fetchResponseData } from "@/lib/db/db-helper";
 
 export default async function Letter({ params }: { params: { id: string } }) {
   const user = await currentUser();
+
   let userExist: boolean;
 
   user !== null ? (userExist = true) : (userExist = false);
