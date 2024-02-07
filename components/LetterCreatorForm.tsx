@@ -32,6 +32,7 @@ export default function LetterCreatorForm() {
           <input
             type="text"
             className="rounded-lg w-20"
+            disabled
             defaultValue="hello!"
           />
           <input
@@ -44,11 +45,13 @@ export default function LetterCreatorForm() {
           <input
             type="text"
             className="rounded-lg w-min"
+            disabled
             defaultValue="I want to tell you something."
           />
           <input
             type="text"
             className="rounded-lg w-full"
+            disabled
             defaultValue="That, in the world of billions of people. I"
           />
           <textarea
@@ -60,6 +63,7 @@ export default function LetterCreatorForm() {
           <input
             type="text"
             className="rounded-lg w-52"
+            disabled
             defaultValue="In the occasion of Love,"
           />
           <input
@@ -70,7 +74,8 @@ export default function LetterCreatorForm() {
           <input
             type="text"
             className="rounded-lg w-full"
-            defaultValue="I am asking you, Will you be my valentine"
+            disabled
+            defaultValue="I am asking you, Will you be my valentine?"
           />
 
           <input hidden name="background" value={bgSelected} readOnly />
