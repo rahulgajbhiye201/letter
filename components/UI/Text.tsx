@@ -110,7 +110,7 @@ const Text: React.FC<textProps> = ({
         .add({
           targets: ["#ValMessage2", "#ValBlushGif"],
           opacity: [1, 0],
-          delay: 15000,
+          delay: 20000,
         })
         .add({
           targets: "#ValResponse",
