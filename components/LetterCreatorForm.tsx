@@ -50,7 +50,7 @@ export default function LetterCreatorForm() {
           />
           <input
             type="text"
-            className="rounded-lg w-80"
+            className="rounded-lg w-full"
             disabled
             defaultValue="That, In the world with billions of people. I"
           />
