@@ -3,17 +3,11 @@
 import { useState } from "react";
 import { useFormState } from "react-dom";
 import { LetterCreator } from "@/lib/server-actions/LetterCreator";
-
 import Carousel from "./UI/Carousel";
 
 export default function LetterCreatorForm() {
   const [formState, formAction] = useFormState(LetterCreator, null);
   const [bgSelected, setBgSelected] = useState("");
-
-  const handleBgValue = (e: any) => {
-    const bgValue = e.currentTarget.value;
-    setBgSelected(bgValue);
-  };
 
   function fieldChecker(e: any) {
     if (bgSelected === "") {
@@ -82,7 +76,7 @@ export default function LetterCreatorForm() {
         </div>
         <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
           <Carousel
-            handleBgValue={(e) => handleBgValue(e)}
+            handleBgValue={(e) => setBgSelected(e.currentTarget.value)}
             bgSelected={bgSelected}
           />
         </div>
