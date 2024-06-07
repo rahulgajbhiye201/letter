@@ -1,7 +1,7 @@
 import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "@/styles/globals.css";
 import Image from "next/image";
 import { currentUser } from "@clerk/nextjs";
 
@@ -11,10 +11,10 @@ import Navbar from "@/components/UI/Navbar";
 import Footer from "@/components/UI/Footer";
 
 export const metadata: Metadata = {
-  title: "Valentine's",
-  description: "Valentine's 2024",
+  title: "Letter",
+  description: "Letter",
   icons: {
-    icon: "/valentines.svg", // /public path
+    icon: "/letter.svg", // /public path
   },
 };
 

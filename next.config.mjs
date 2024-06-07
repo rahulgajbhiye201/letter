@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  assetPrefix: "https://valentinesletter.vercel.app/",
+  assetPrefix: "https://cryptosh.rahulgajbhiye.com/",
 };
 
 export default nextConfig;
